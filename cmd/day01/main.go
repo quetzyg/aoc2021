@@ -94,7 +94,7 @@ func main() {
 	err = input.Parse(f, bufio.ScanLines, parseFunc)
 
 	if err != nil {
-		log.Fatalf("unable to parse input: %v", err)
+		log.Fatalf("error parsing input: %v", err)
 	}
 
 	fmt.Printf("part #1: %d\n", part1(measurements))
