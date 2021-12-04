@@ -14,8 +14,8 @@ const windowSize = 3
 
 var measurements []int
 
-var parseFunc = func(s string) error {
-	depth, err := strconv.Atoi(s)
+var parseFunc = func(line int, data string) error {
+	depth, err := strconv.Atoi(data)
 
 	if err != nil {
 		return err

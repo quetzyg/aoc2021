@@ -24,8 +24,8 @@ var (
 	aim        int
 )
 
-var parseFunc = func(s string) error {
-	fields := strings.Fields(s)
+var parseFunc = func(line int, data string) error {
+	fields := strings.Fields(data)
 
 	if len(fields) != 2 {
 		return fmt.Errorf("expected 2 fields per line, got %d", len(fields))
