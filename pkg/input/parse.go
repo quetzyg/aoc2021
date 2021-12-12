@@ -16,7 +16,7 @@ func Parse(reader io.Reader, split bufio.SplitFunc, callback func(int, string) e
 		err := callback(line, scanner.Text())
 
 		if err != nil {
-			return fmt.Errorf("on input line %d: %w", line, err)
+			return fmt.Errorf("on line %d: %w", line, err)
 		}
 
 		line++
